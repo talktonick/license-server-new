@@ -11,7 +11,7 @@ const licenses = {};
 /**
  * Endpoint to generate a license key after a successful subscription
  */
-app.post("/generate-license", (req, res) => {
+app.post("/generate_license", (req, res) => {
   const { email, subscriptionId } = req.body;
 
   // Generate a random license key
@@ -33,7 +33,7 @@ app.post("/generate-license", (req, res) => {
 /**
  * Endpoint to validate the license (to be called by the CLI or any client)
  */
-app.get("/validate-license", (req, res) => {
+app.get("/validate_license", (req, res) => {
   const { licenseKey, email } = req.query; 
 
   if (!licenseKey || !email) {
